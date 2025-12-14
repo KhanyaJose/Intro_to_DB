@@ -27,8 +27,7 @@ CREATE TABLE IF NOT EXISTS orders (
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
 );
 
--- Try without backticks, using underscore
-CREATE TABLE IF NOT EXISTS order_details (
+CREATE TABLE IF NOT EXISTS `order details` (
     orderdetailid INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
     book_id INT,
