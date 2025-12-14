@@ -8,7 +8,6 @@ def create_database():
     Function to create the alx_book_store database if it doesn't exist.
     """
     # Database connection configuration
-    # Update these with your MySQL server credentials
     host = "localhost"
     user = "root"  # Change this to your MySQL username
     password = ""  # Change this to your MySQL password
@@ -37,7 +36,7 @@ def create_database():
             # Close cursor
             cursor.close()
             
-    except Error as e:
+    except mysql.connector.Error as e:
         print(f"Error: {e}")
         print("Failed to connect to the MySQL server. Please check your credentials and ensure MySQL is running.")
         
