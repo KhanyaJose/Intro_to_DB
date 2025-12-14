@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS orders (
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
 );
 
--- Create Order_Details table (with underscore to avoid space issue)
-CREATE TABLE IF NOT EXISTS order_details (
+-- Create order details table (with backticks since name has space)
+CREATE TABLE IF NOT EXISTS `order details` (
     orderdetailid INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
     book_id INT,
