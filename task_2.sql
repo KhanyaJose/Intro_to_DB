@@ -1,8 +1,5 @@
 -- task_2.sql
 
--- Switch to the correct database
-USE alx_book_store;
-
 -- Create the authors table
 CREATE TABLE IF NOT EXISTS authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -35,7 +32,7 @@ CREATE TABLE IF NOT EXISTS orders (
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
 );
 
--- Create the order details table (with space in name, using backticks)
+-- Create the order details table (with space in name)
 CREATE TABLE IF NOT EXISTS `order details` (
     orderdetailid INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
